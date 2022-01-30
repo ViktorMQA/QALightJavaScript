@@ -109,14 +109,13 @@ function isOddOrEven() {
 //   во всех остальных случаях вывести само число
 function fizzbuzz() {
     for (let i = 1; i <= 30; i++) {
-        if (i % 3 === 0) {
+        if (i % 5 === 0 && i % 3 === 0) {
+            console.log(`${i} - fizzbuzz`)
+        }else if (i % 3 === 0) {
             console.log(`${i} - fizz`)
         } else if (i % 5 === 0) {
             console.log(`${i} - buzz`)
-        }
-        else if (i % 5 === 0 && i % 3 === 0) {
-            console.log(`${i} - fizzbuzz`)
-        } else {
+        }else {
             console.log(String(i))
         }
     }
@@ -149,9 +148,9 @@ function avgOfNums() {
 
 // 9* Еще один треугольник
 function drawTriange2() {
-    for (i = 5; i >= 0; i--) {
+    for (i = 5; i > 0; i--) {
         let str = ""
-        for (j = 0; j <= 5; j++) {
+        for (j = 0; j < 5; j++) {
             if (i <= j) {
                 str += " "
             } else {
@@ -216,6 +215,7 @@ function drawTriange4() {
 // 12* Одной строкой через запятую вывести все ПРОСТЫЕ числа  до 50  ==>  2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
 function printPrimeNumbers() {
     let n = 50
+    let str = ""
 
     nextPrime:
     for (let i = 2; i <= n; i++) { 
@@ -223,8 +223,11 @@ function printPrimeNumbers() {
         if (i % j == 0) continue nextPrime; 
       }
 
-      console.log( i )
+      str = str + i + ", "  
+      // str += !str ?  i : `, ${i}`
     }
+    str = str.substring(0, str.length - 2)
+    console.log(str)
 }
 //printPrimeNumbers()
 
