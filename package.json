@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "nightwatch": "^1.7.11"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.15"
   }
 }
