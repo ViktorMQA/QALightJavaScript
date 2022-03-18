@@ -100,7 +100,7 @@ function countTypes (obj){
   for(let key in obj){
     if(obj[key] !== null){
       newKey = typeof obj[key];
-      object[newKey] = object[newKey] === undefined ? object[newKey] = 1 : object[newKey] += 1
+      object[newKey] = object[newKey] === undefined ? 1 : object[newKey] += 1
     } else {
       countNull++ 
       newKey = null;
