@@ -155,13 +155,13 @@
 
 // //forEach(arr, callback) ==> undefined
 
-let arr = ['this', 'is', 'my', 'name'];
+// let arr = ['this', 'is', 'my', 'name'];
 
-Array.prototype.forEach2 = function (cb) {
-    for (let i = 0; i < this.length; i++) {
-        cb(this[i], i, this);
-    }
-}
+// Array.prototype.forEach2 = function (cb) {
+//     for (let i = 0; i < this.length; i++) {
+//         cb(this[i], i, this);
+//     }
+// }
 
 // arr.forEach2((elem, i, arr) => {
 //     console.log(`element: '${elem}' index: ${i} array: [${arr}]`);
@@ -172,18 +172,18 @@ Array.prototype.forEach2 = function (cb) {
 
 // //map(arr, callback) ==> [elem1,...elemN]
 
-let arr = ['this', 'is', 'my', 'name'];
+// let arr = ['this', 'is', 'my', 'name'];
 
-Array.prototype.map2 = function (cb) {
-    let newArr = [];
-    for (let i = 0; i < this.length; i++) {
-        newArr.push(cb(this[i], i, this));
-    }
-    return newArr;
-}
-let newArr = arr.map2((elem, i, arr) => {
-    return elem += 'bla';
-});
+// Array.prototype.map2 = function (cb) {
+//     let newArr = [];
+//     for (let i = 0; i < this.length; i++) {
+//         newArr.push(cb(this[i], i, this));
+//     }
+//     return newArr;
+// }
+// let newArr = arr.map2((elem, i, arr) => {
+//     return elem += 'bla';
+// });
 
 // console.log(newArr);
 
@@ -192,37 +192,37 @@ let newArr = arr.map2((elem, i, arr) => {
 // filter(arr, callback) ==> []
 
 
-let arr2 = [1, 2, 3, 4, 5];
-Array.prototype.filter2 = function (cb) {
-    let newArr = [];
-    for (let i = 0; i < this.length; i++) {
-        if(cb(this[i], i, this)){
-            newArr.push(this[i]);
-        }
-    }
-    return newArr;
-}
+// let arr2 = [1, 2, 3, 4, 5];
+// Array.prototype.filter2 = function (cb) {
+//     let newArr = [];
+//     for (let i = 0; i < this.length; i++) {
+//         if(cb(this[i], i, this)){
+//             newArr.push(this[i]);
+//         }
+//     }
+//     return newArr;
+// }
 
-let newArr = arr2.filter2((elem, i, arr) => {
-    return elem > 3;
-});
+// let newArr = arr2.filter2((elem, i, arr) => {
+//     return elem > 3;
+// });
 //console.log(newArr);
 
 //-----------------------------------------------
 
 // reduce(arr, callback, acc) ==> acc
 
-let arr2 = [1, 2, 3, 4, 35];
-Array.prototype.reduce2 = function (cb, initial) {
-    let accum = initial;
-    for (let i = 0; i < this.length; i++) {
-        accum = cb(accum, this[i], i, this);
-    }
-    return accum;
-}
-let result = arr2.reduce2((accum, elem, i, arr) => {
-   return accum += elem;
-}, 0);
+// let arr2 = [1, 2, 3, 4, 35];
+// Array.prototype.reduce2 = function (cb, initial) {
+//     let accum = initial;
+//     for (let i = 0; i < this.length; i++) {
+//         accum = cb(accum, this[i], i, this);
+//     }
+//     return accum;
+// }
+// let result = arr2.reduce2((accum, elem, i, arr) => {
+//    return accum += elem;
+// }, 0);
 
 //console.log(result);
 
@@ -231,19 +231,19 @@ let result = arr2.reduce2((accum, elem, i, arr) => {
 // // find(arr, callback) ==> elem
 
 
-let arr2 = [1, 2, 3, 4, 5];
-Array.prototype.find2 = function (cb) {
-    let newArr = [];
-    for (let i = 0; i < this.length; i++) {1
-        if(cb(this[i], i, this)){
-            newArr.push(this[i]);
-            return newArr;
-        }
-    }
-}
-let newArr = arr2.find2((elem, i, arr) => {
-    return elem > 3
-});
+// let arr2 = [1, 2, 3, 4, 5];
+// Array.prototype.find2 = function (cb) {
+//     let newArr = [];
+//     for (let i = 0; i < this.length; i++) {1
+//         if(cb(this[i], i, this)){
+//             newArr.push(this[i]);
+//             return newArr;
+//         }
+//     }
+// }
+// let newArr = arr2.find2((elem, i, arr) => {
+//     return elem > 3
+// });
 // console.log(newArr);
 
 //-----------------------------------------------
