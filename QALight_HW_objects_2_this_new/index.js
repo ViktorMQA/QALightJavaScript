@@ -51,5 +51,3 @@ newObj
     //.send();
 
 //console.log(newObj);
-
-

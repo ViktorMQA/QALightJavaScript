@@ -176,7 +176,7 @@ function getVoterStats(arr) {
     numSeniorVotesPeople: 0,
     numSeniorPeople: 0
   })
-  return newObj;
+  return newObj;  
 }
 //console.log(getVoterStats(voters));
 

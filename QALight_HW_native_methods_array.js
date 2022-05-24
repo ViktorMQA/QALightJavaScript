@@ -189,19 +189,19 @@
 
 //-----------------------------------------------
 
-// filter(arr, callback) ==> []
+// // filter(arr, callback) ==> []
 
 
 // let arr2 = [1, 2, 3, 4, 5];
-// Array.prototype.filter2 = function (cb) {
-//     let newArr = [];
-//     for (let i = 0; i < this.length; i++) {
-//         if(cb(this[i], i, this)){
-//             newArr.push(this[i]);
-//         }
-//     }
-//     return newArr;
-// }
+Array.prototype.filter2 = function (cb) {
+    let newArr = [];
+    for (let i = 0; i < this.length; i++) {
+        if(cb(this[i], i, this)){
+            newArr.push(this[i]);
+        }
+    }
+    return newArr;
+}
 
 // let newArr = arr2.filter2((elem, i, arr) => {
 //     return elem > 3;
@@ -210,7 +210,7 @@
 
 //-----------------------------------------------
 
-// reduce(arr, callback, acc) ==> acc
+// // reduce(arr, callback, acc) ==> acc
 
 // let arr2 = [1, 2, 3, 4, 35];
 // Array.prototype.reduce2 = function (cb, initial) {

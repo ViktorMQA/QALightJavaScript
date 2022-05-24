@@ -64,15 +64,20 @@ function capitalize(str) {
 
 
 // 4 Перевернуть строку  - reverse(str)  // string --> gnirts //2 способа - цикл, и arr.reverse
+//var 1
 function reverse(str) {
-    let arr = str.split(' ').reverse();
+    let arr = str.split('');
+    let arr2 = [];
     let string = '';
-    for (let i = 0; i < arr.length; i++) {
-        string += string === '' ? arr[i] : ` ${arr[i]}`;
+    for (let i = arr.length; i >= 0; i--) {
+        arr2.push(arr[i])
+
     }
+    string = arr2.join('');
     return string;
+
 }
-//console.log(reverse('hi my name is viktor'));
+//console.log(reverse("string"))
 
 // var 2
 function reverse2(str) {
