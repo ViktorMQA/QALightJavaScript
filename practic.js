@@ -624,4 +624,7 @@ Array.prototype.reduce44 = function (cb, first) {
 let kdjfkd = arrNumber.reduce44((acc, elem)=>{
    return acc += elem*10;
 }, 0)
-console.log(kdjfkd)
+//console.log(kdjfkd)
+
+let car = 'red' && 'green';
+console.log(car)

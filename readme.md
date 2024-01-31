@@ -80,3 +80,10 @@ example: `app-site-menu div#site-menu nav header div[aria-label="Navigate to hom
 
 https://www.w3schools.com/cssref/css_selectors.asp
 https://learn.javascript.ru/css-selectors
+
+### kill process 
+1. var
+`killall chromedriver`
+2. var
+`ps -ax | grep -i chromedriver `
+`kill <#port>`
