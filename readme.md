@@ -33,6 +33,18 @@ levell up
 by index
 `[1]` example: `//tbody/tr[1]/td[8]`  example: `(//*[@id="oid"])[1]`
 
+OC XPath 
+
+up to parent element
+`/parent::div` example: `//h3[contains(., 'Please activate developer mode')]/parent::div`
+
+next element 
+`/folollowing-sibling::div` exaple: `//div[@id='ch-onboarding']/following-sibling::style`
+
+go to child
+`child::div`  exaple: `//div[@id='ch-onboarding']/child::div`
+
+
 ### ****************************************************************
 
 FUNCTIONS XPath
@@ -47,7 +59,8 @@ full text match
 `text()`  example: `//form[text()="blabla"]`
 
 incomplete text match
-`contains()` example: by text `//form[contains(text(), "bla")]` or by atribute `//form[contains(@class, "fut")]`
+`contains()` example: by text `//form[contains(text(), "bla")]` or `//form[contains(., "bla")]` 
+or by atribute `//form[contains(@class, "fut")]`
 
 
 ### CSS selectors
@@ -60,6 +73,12 @@ class
 
 tag
 `use jast tag name` examle: `a`
+
+сусідній елемент
+`+` examle: `dip + p`
+
+всі сусідні елементи
+`~` examle: examle: `dip ~ p`
 
 atribute presence
 `[atributeName]`

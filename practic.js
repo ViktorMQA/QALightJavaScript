@@ -628,3 +628,31 @@ let kdjfkd = arrNumber.reduce44((acc, elem)=>{
 
 let car = 'red' && 'green';
 console.log(car)
+
+// const sum22 = (a, b) => a + b;
+// const diff2 = (a, b) => a - b;
+// const multiply2 = (a, b) => a * b;
+// const divide = (a, b) => a / b;
+
+function calculate(firstNumber, secondNumber, callback = sum) {
+    if (typeof (firstNumber) != 'number' || typeof (secondNumber) != 'number') {
+        let str = "Invalid args type";
+        return str;
+    }
+    callback(firstNumber, secondNumber);
+    
+}
+
+// calculate(4, 4, (a, b) => {
+//     const sum = a + b;
+//     const minus = a - b
+//     console.log(sum, minus)
+// });
+
+
+function summ (a, b, callback){
+const result = a+b
+callback(result)
+}
+
+// summ(2, 3, (str)=>{console.log("summa",str)})
